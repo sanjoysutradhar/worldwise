@@ -1,11 +1,11 @@
-import CityItem from "./CityItem";
+import CountryItem from "./CountryItem";
 import Message from "./Message";
-import styles from "./CityList.module.css";
+import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 
 import PropTypes from "prop-types";
 
-function CityList({ cities, isLoading }) {
+function CountryList({ cities, isLoading }) {
   // const citiesArray = Object.values(cities);
   // console.log("Type of cities:", typeof cities);
   // console.log(cities);
@@ -16,11 +16,17 @@ function CityList({ cities, isLoading }) {
       <Message message="Add your first city by clicking on a city on the map" />
     );
 
+  const countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country))
+      return [...arr, { country: city.country, emoji: city.emoji }];
+    else return arr;
+  }, []);
+
   return (
-    <ul className={styles.cityList}>
-      {cities.map(
-        (city) => (
-          <CityItem city={city} key={city.id} />
+    <ul className={styles.countryList}>
+      {countries.map(
+        (country) => (
+          <CountryItem country={country} key={country.country} />
         )
         // Object.values(`${city.id}`)
       )}
@@ -28,7 +34,7 @@ function CityList({ cities, isLoading }) {
   );
 }
 
-CityList.propTypes = {
+CountryList.propTypes = {
   cities: PropTypes.arrayOf(
     PropTypes.shape({
       cityName: PropTypes.string.isRequired,
@@ -42,4 +48,4 @@ CityList.propTypes = {
   isLoading: PropTypes.bool.isRequired,
 };
 
-export default CityList;
+export default CountryList;
