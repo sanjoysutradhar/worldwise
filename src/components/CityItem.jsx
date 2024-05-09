@@ -13,7 +13,7 @@ function CityItem({ city }) {
   //   city = Object.values(city);
   const { cityName, emoji, date, id, position } = city;
 
-  console.log(position);
+  // console.log(position);
   return (
     <li>
       <Link
