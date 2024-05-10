@@ -1,16 +1,34 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./Map.module.css";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { useState } from "react";
-
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvent,
+} from "react-leaflet";
+import { useEffect, useState } from "react";
+import { useCities } from "../contexts/CitiesContext";
+import PropTypes from "prop-types";
 function Map() {
+  const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+
+  const [searchParams] = useSearchParams();
+
+  const mapLat = parseFloat(searchParams.get("lat"));
+  const mapLng = parseFloat(searchParams.get("lng"));
+
+  useEffect(() => {
+    if (!isNaN(mapLat) && !isNaN(mapLng)) {
+      setMapPosition([mapLat, mapLng]);
+    }
+  }, [mapLat, mapLng]);
+
   return (
-    <div className={styles.mapContainer} onClick={() => navigate("form")}>
+    // <div className={styles.mapContainer} onClick={() => navigate("form")}>
+    <div className={styles.mapContainer}>
       {/* <h1>Map</h1>
       <h1>
         Position: {lat}, {lng}
@@ -22,7 +40,7 @@ function Map() {
       <MapContainer
         className={styles.map}
         center={mapPosition}
-        zoom={13}
+        zoom={6}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -30,14 +48,42 @@ function Map() {
           // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        <Marker position={mapPosition}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        {cities.map((city) => (
+          <Marker
+            position={[city.position.lat, city.position.lng]}
+            key={city.id}
+          >
+            <Popup>
+              <span>{city.emoji}</span> <sanp>{city.cityName}</sanp>
+            </Popup>
+          </Marker>
+        ))}
+        <ChangeCenter position={mapPosition} />
+        <DeleteClick />
       </MapContainer>
     </div>
   );
 }
+
+function ChangeCenter({ position }) {
+  const map = useMap();
+  map.setView(position);
+  return null;
+}
+
+function DeleteClick() {
+  const navigate = useNavigate();
+  //defalut leaflet event
+  useMapEvent({
+    click: (e) => {
+      // console.log(e);
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    },
+  });
+}
+
+ChangeCenter.propTypes = {
+  position: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 
 export default Map;
