@@ -4,8 +4,10 @@ import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 
 import PropTypes from "prop-types";
+import { useCities } from "../contexts/CitiesContext";
 
-function CountryList({ cities, isLoading }) {
+function CountryList() {
+  const { cities, isLoading } = useCities();
   // const citiesArray = Object.values(cities);
   // console.log("Type of cities:", typeof cities);
   // console.log(cities);
