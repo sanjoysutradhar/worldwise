@@ -4,7 +4,6 @@
   background-color: var(--color-dark--2);
   border-radius: 7px;
   overflow: scroll;
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,4 +43,8 @@
 .city a:visited {
   font-size: 1.6rem;
   color: var(--color-brand--1);
+}
+.city::-webkit-scrollbar {
+  /* This targets the default scrollbar in WebKit browsers */
+  display: none; /* Hide the default scrollbar */
 }

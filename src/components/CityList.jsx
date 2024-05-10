@@ -30,18 +30,18 @@ function CityList() {
   );
 }
 
-CityList.propTypes = {
-  cities: PropTypes.arrayOf(
-    PropTypes.shape({
-      cityName: PropTypes.string.isRequired,
-      country: PropTypes.string.isRequired,
-      emoji: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired, // Adjust the type accordingly
-      notes: PropTypes.string.isRequired, // Adjust the type accordingly
-      id: PropTypes.number.isRequired,
-    })
-  ).isRequired,
-  isLoading: PropTypes.bool.isRequired,
-};
+// CityList.propTypes = {
+//   cities: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       cityName: PropTypes.string.isRequired,
+//       country: PropTypes.string.isRequired,
+//       emoji: PropTypes.string.isRequired,
+//       date: PropTypes.string.isRequired, // Adjust the type accordingly
+//       notes: PropTypes.string.isRequired, // Adjust the type accordingly
+//       id: PropTypes.number.isRequired,
+//     })
+//   ).isRequired,
+//   isLoading: PropTypes.bool.isRequired,
+// };
 
 export default CityList;
