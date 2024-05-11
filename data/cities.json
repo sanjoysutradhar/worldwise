@@ -1,51 +1,63 @@
 {
   "cities": [
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "id": "a576",
+      "cityName": "Torreadrada",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-11T07:03:32.387Z",
+      "notes": "test",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": "98443197"
-    },
-    {
-      "id": "c921",
-      "cityName": "Einbeck",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2024-05-11T06:09:18.327Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 51.820235946075144,
-        "lng": 9.868442961961293
+        "lat": 41.45774409833695,
+        "lng": -3.798632017451656
       }
     },
     {
-      "id": "6b65",
-      "cityName": "Ilanskiy",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2024-05-11T06:09:27.080Z",
-      "notes": "Amazing 😃",
+      "id": "5ea9",
+      "cityName": "Koci",
+      "country": "Czechia",
+      "emoji": "🇨🇿",
+      "date": "2024-05-11T07:11:09.973Z",
+      "notes": "",
       "position": {
-        "lat": 55.75992616391157,
-        "lng": 96.75689687253657
+        "lat": 49.95121990866204,
+        "lng": 15.853287336187506
       }
     },
     {
-      "id": "8017",
-      "cityName": "Gazipur",
-      "country": "Bangladesh",
-      "emoji": "🇧🇩",
-      "date": "2024-05-11T06:09:45.439Z",
-      "notes": "Amazing 😃",
+      "id": "93e0",
+      "cityName": "Ladrillar",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-11T07:15:20.282Z",
+      "notes": "",
       "position": {
-        "lat": 23.964511026609028,
-        "lng": 90.27003502488125
+        "lat": 40.463666324587685,
+        "lng": -6.238253282797196
+      }
+    },
+    {
+      "id": "9532",
+      "cityName": "Zamora",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-11T07:18:07.406Z",
+      "notes": "",
+      "position": {
+        "lat": 41.52502957323801,
+        "lng": -5.798681883635851
+      }
+    },
+    {
+      "id": "1374",
+      "cityName": "Dubno",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2024-05-11T07:18:21.850Z",
+      "notes": "ddd",
+      "position": {
+        "lat": 50.317408112618715,
+        "lng": 25.2746458068101
       }
     }
   ]
