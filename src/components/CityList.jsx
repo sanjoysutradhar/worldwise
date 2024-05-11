@@ -11,6 +11,7 @@ function CityList() {
   // const citiesArray = Object.values(cities);
   // console.log("Type of cities:", typeof cities);
   // console.log(cities);
+  console.log(isLoading);
   if (isLoading) return <Spinner />;
 
   if (!cities.length)

@@ -11,7 +11,8 @@ function Button({ children, onClick, type }) {
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired, // Changed to func from function
+  // onClick: PropTypes.func.isRequired, // Changed to func from function
+  onClick: PropTypes.func, // Changed to func from function
   type: PropTypes.string.isRequired,
 };
 
