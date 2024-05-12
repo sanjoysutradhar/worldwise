@@ -1,99 +1,15 @@
 {
   "cities": [
     {
-      "id": "a576",
-      "cityName": "Torreadrada",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-11T07:03:32.387Z",
-      "notes": "test",
-      "position": {
-        "lat": 41.45774409833695,
-        "lng": -3.798632017451656
-      }
-    },
-    {
-      "id": "5ea9",
-      "cityName": "Koci",
-      "country": "Czechia",
-      "emoji": "🇨🇿",
-      "date": "2024-05-11T07:11:09.973Z",
+      "id": "9fdd",
+      "cityName": "Gazaria",
+      "country": "Bangladesh",
+      "emoji": "🇧🇩",
+      "date": "2024-05-12T09:19:32.944Z",
       "notes": "",
       "position": {
-        "lat": 49.95121990866204,
-        "lng": 15.853287336187506
-      }
-    },
-    {
-      "id": "93e0",
-      "cityName": "Ladrillar",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-11T07:15:20.282Z",
-      "notes": "",
-      "position": {
-        "lat": 40.463666324587685,
-        "lng": -6.238253282797196
-      }
-    },
-    {
-      "id": "9532",
-      "cityName": "Zamora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-11T07:18:07.406Z",
-      "notes": "",
-      "position": {
-        "lat": 41.52502957323801,
-        "lng": -5.798681883635851
-      }
-    },
-    {
-      "id": "1374",
-      "cityName": "Dubno",
-      "country": "Ukraine",
-      "emoji": "🇺🇦",
-      "date": "2024-05-11T07:18:21.850Z",
-      "notes": "ddd",
-      "position": {
-        "lat": 50.317408112618715,
-        "lng": 25.2746458068101
-      }
-    },
-    {
-      "id": "f9d7",
-      "cityName": "Garrovillas",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-12T07:39:15.160Z",
-      "notes": "",
-      "position": {
-        "lat": 39.72111416973862,
-        "lng": -6.591796875000001
-      }
-    },
-    {
-      "id": "a2e0",
-      "cityName": "Romanos",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-12T07:41:34.868Z",
-      "notes": "",
-      "position": {
-        "lat": 41.14344589034595,
-        "lng": -1.2744140625000002
-      }
-    },
-    {
-      "id": "e2f9",
-      "cityName": "Hinojosa del Duque",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-05-12T07:51:37.782Z",
-      "notes": "",
-      "position": {
-        "lat": 38.42375015384076,
-        "lng": -5.031738281250001
+        "lat": 23.540356316547168,
+        "lng": 90.6591796875
       }
     }
   ]

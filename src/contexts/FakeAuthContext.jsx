@@ -50,6 +50,6 @@ function useAuth() {
 }
 
 AuthProvider.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 export { AuthProvider, useAuth };
