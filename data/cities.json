@@ -59,6 +59,42 @@
         "lat": 50.317408112618715,
         "lng": 25.2746458068101
       }
+    },
+    {
+      "id": "f9d7",
+      "cityName": "Garrovillas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-12T07:39:15.160Z",
+      "notes": "",
+      "position": {
+        "lat": 39.72111416973862,
+        "lng": -6.591796875000001
+      }
+    },
+    {
+      "id": "a2e0",
+      "cityName": "Romanos",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-12T07:41:34.868Z",
+      "notes": "",
+      "position": {
+        "lat": 41.14344589034595,
+        "lng": -1.2744140625000002
+      }
+    },
+    {
+      "id": "e2f9",
+      "cityName": "Hinojosa del Duque",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-05-12T07:51:37.782Z",
+      "notes": "",
+      "position": {
+        "lat": 38.42375015384076,
+        "lng": -5.031738281250001
+      }
     }
   ]
 }

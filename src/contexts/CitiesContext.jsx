@@ -1,9 +1,9 @@
 import {
-  useState,
   useEffect,
   createContext,
   useContext,
   useReducer,
+  useCallback,
 } from "react";
 import PropTypes from "prop-types";
 const BASE_URL = "http://localhost:9000";
@@ -57,6 +57,7 @@ function CitiesProvider({ children }) {
     reducer,
     intialState
   );
+
   // const [cities, setCities] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
 
@@ -87,26 +88,29 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, [dispatch]);
 
-  async function getCity(id) {
-    if (Number(id) === currentCity.id) return;
-    try {
-      // dispatch({ type: "loading" });
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      // setCurrentCity(data); // Assuming cities is an array inside the response object
-      dispatch({ type: "city/loaded", payload: data });
-    } catch (error) {
-      // alert("There was an error loading data...");
-      // console.error(error);
-      dispatch({
-        type: "rejected",
-        payload: "There was an error loading data...",
-      });
-    }
-    // finally {
-    //   setIsLoading(false);
-    // }
-  }
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity.id) return;
+      try {
+        // dispatch({ type: "loading" });
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        // setCurrentCity(data); // Assuming cities is an array inside the response object
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (error) {
+        // alert("There was an error loading data...");
+        // console.error(error);
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading data...",
+        });
+      }
+      // finally {
+      //   setIsLoading(false);
+      // }
+    },
+    [currentCity.id]
+  );
   async function createCity(newCity) {
     dispatch({ type: "loading" });
     try {
